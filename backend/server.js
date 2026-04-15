@@ -71,7 +71,8 @@ app.get("/api/admin", authenticate, authorize("admin"), (req, res) => {
   res.json({ message: "Admin Dashboard" });
 });
 
-// 🚀 START SERVER
-app.listen(3001, () => {
-  console.log("Server running on http://localhost:3001");
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

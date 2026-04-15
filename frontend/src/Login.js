@@ -8,10 +8,7 @@ function Login() {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post(
-        "http://localhost:3001/api/login",
-        data
-      );
+      const res = await axios.post("https://exp8-xtnk.onrender.com/api/login", data);
 
       localStorage.setItem("token", res.data.token);
 
